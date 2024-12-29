@@ -1,4 +1,22 @@
-<script>
+<script setup>
+        import {ref} from 'vue';
+        
+        const whoamiTxt = ref(null);
+        var posx = ref(0)
+        function ChangePos(e){ 
+                const rect = whoamiTxt.value.getBoundingClientRect();  
+                let actposx = e.clientX - rect.left
+                let half = (rect.width / 2) 
+                if ( actposx < half ){
+                        posx.value = half - actposx
+                        posx.value = -posx.value
+                }else if ( actposx > half ){
+                        posx.value = actposx - half
+                }else {
+                        posx.value = 0
+                }
+        }
+
 
 </script>
 
@@ -6,9 +24,9 @@
         <div class="about-bowl">
                 <div class="about-cont stiff">
                         <h2>whoami</h2>
-                        <p>
+                        <b class='whoami-txt' ref='whoamiTxt' @mousemove="ChangePos" :style="{ backgroundPosition :  posx+'px center'}">
                                 <span class="italic">Hello!</span> I’m Krishna Prasad, pursuing my MCA at NIT Warangal, where I focus on full-stack development to build exceptional web applications. Known for my quick learning abilities and passion for coding, I have also worked as a freelancer on Fiverr, creating eye-catching landing pages.
-                        </p>
+                        </b>
                         <br>
                         <h2>codebase</h2>
                         <div class="skills-box">
@@ -33,7 +51,7 @@
                                 <p>2024 - 2027</p>
                         </div>
                         <div class="edu-box">
-                                <a href="https://ucssou.osmania.ac.in" target="_blank">University College of Science, Saifabad, Osmania Univeristy</a>
+                                <a href="https://ucssou.ac.in" target="_blank">University College of Science, Saifabad, Osmania Univeristy</a>
                                 <p>Bachelor of Computer Applications</p>
                                 <p>2021 - 2024</p>
                         </div>
@@ -81,9 +99,22 @@
         .about-cont h2 {
                 
         }
+        .whoami-txt {
+               color : rgb(255 255 255 / .2) !important; 
+               font-weight: 400;
+               line-height : 1.75em; 
+
+               background-clip: text; 
+               background-repeat : no-repeat;
+                background-image: radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 60%, rgba(255, 255, 255, 0.4) 80%, transparent 100%);
+                backdrop-filter: blur(10px); 
+                background-position : 50% center;
+                transition-timing-function : cubic-bezier(0.33, 0.81, 0.66, 0.95);
+        }
         .about-cont p {
                 color : $gray;
         }
+        
         .skills-box {
                 width : 100%;
                 display : flex;
