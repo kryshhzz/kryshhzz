@@ -43,7 +43,8 @@
 
         .atf {
                 //background : linear-gradient(to top,black,#303030);
-                background : linear-gradient(to top,rgba(255 255 255 / 13%), black);
+                background : linear-gradient(to top,rgba(255 255 255 / 20%), black);
+                background : linear-gradient(to top ,rgba(177, 255, 146, 0.2), black);
                 width : 100%;
         }
         .atf-container {
@@ -97,12 +98,12 @@
                 position : absolute;
                 top : -2em;
                 left : 50%; 
-                font-size :.45em;
+                font-size :.35em;
                 transform: translateX(-50%);
                 text-transform: none;
                 color : $green;
                 font-weight: 300;
-                font-style : italic;
+                // font-style : italic;
         }
         // .layer h1::after {
         //         content : url('../assets/images/arrow.svg');

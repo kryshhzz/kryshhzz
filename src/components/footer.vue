@@ -5,7 +5,7 @@
 <template>
         <footer>
                 <div class="footer stiff">
-                        <h2>social()</h2>
+                        <h2>social</h2>
                         <div class="links">
                                 <a href="https://www.linkedin.com/in/kryshhzz/" target="_blank">linkedin</a>
                                 <a href="mailto:kryshhzz@protonmail.com"target="_blank">email</a>

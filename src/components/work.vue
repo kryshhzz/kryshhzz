@@ -6,7 +6,7 @@
         <div class="work-bowl">
                 <div class="work-cont stiff">
                         <div class="work-box wb2" >
-                                <h2 id='mywork'>My Work</h2>
+                                <h2 id='mywork'>my work</h2>
                         </div>
                         <div class="work-box wb1" onclick="window.location='https://veilmsg.pythonanywhere.com'">
                                 <p>An open-source web platform for anonymous feedback && quesitons.</p>
@@ -17,13 +17,23 @@
                                 <p>A very fast url fuzzer in Golang used for pentesting.</p>
                                 <p>Tech: Golang</p>
                                 <b>Lessgo</b>
+                        </div> 
+                        <div class="work-box wb3" onclick="window.location='https://bunting.leapcell.app'">
+                                <p>A web app to sync audio playback across multiple devices with sub-second accuracy</p>
+                                <p>Tech: Golang, Gin-Gonic, Gorilla Websockets, HTML, CSS, JavaScript</p>
+                                <b>Bunting</b>
                         </div>
-                        <div class="work-box wb5" onclick="window.location='https://Swing.pythonanywhere.com'">
+                        <div class="work-box wb5" onclick="window.location='https://github.com/kryshhzz/koi'">
+                                <p>A lightweight, web-based code editor with syntax highlighting and real-time editing</p>
+                                <p>Tech: Golang, Gin Gonic, HTML, CSS, JavaScript</p>
+                                <b>Koi</b>
+                        </div>
+                        <div class="work-box wb6" onclick="window.location='https://Swing.pythonanywhere.com'">
                                 <p>An online music streaming web platform.</p>
                                 <p>Tech: Django, Html, CSS, JS, Ajax</p>
                                 <b>Swing</b>
                         </div>
-                        <div class="work-box wb3" onclick="window.location='https://bugz.pythonanywhere.com'">
+                        <div class="work-box wb7" onclick="window.location='https://bugz.pythonanywhere.com'">
                                 <p>A simple blog website explaining various programming errors.</p>
                                 <p>Tech: Django, Html, CSS, JS</p>
                                 <b>Bugz</b>
@@ -86,20 +96,27 @@
 
 
                 h2 {
-                        text-transform: capitalize;
                         color : $white;
                         position: relative;
                 }
 
         }
-        .wb2::after {
-                content : url("../assets/images/star.svg");
-                position : absolute;
-                bottom : 1em;
-                right: 1em;
-                width : 3em;
-                height : 3em;
+        
+
+        @media(min-width : 730px){
+                .wb2::before {
+                        content : "work";
+                        position : absolute;
+                        left : 0;
+                        bottom : 0;
+                        color : rgb(255 255 255 / .03);
+                        font-size : 8em;
+                        text-transform : uppercase;
+                        font-weight:1000;
+                        font-family : sans-serif;
+                } 
         }
+
 
         .work-box p {
                 color : $gray;
@@ -118,7 +135,12 @@
                 text-decoration-thickness: .05em;
                 text-underline-offset: .5em;
                 text-decoration-color: $gray;
-                text-decoration-style: wavy;
+                text-decoration-style: wavy; 
+
+                text-transform: uppercase;
+                font-size: .9em;
+                font-weight: 500;
+                letter-spacing: .1em;
         }
 
         @media ( min-width : 730px){
@@ -128,7 +150,7 @@
 
                         display: grid;
                         grid-template-columns: 1fr 1fr 1fr;
-                        grid-template-rows : 1fr 1fr ;
+                        grid-template-rows : 1fr 1fr 1fr ;
                         place-items : center;
                         grid-gap : .75em;
                 }
@@ -143,7 +165,7 @@
                 }
                 .wb2 {
                         grid-column: 2/3;
-                        grid-row : 1/3;
+                        grid-row : 1/4;
                 }
                 .wb3 {
                         grid-column: 3/4;
@@ -156,7 +178,15 @@
                 .wb5 {
                         grid-column: 3/4;
                         grid-row : 2/3;
-                }  
+                } 
+                .wb6 {
+                        grid-column: 1/2;
+                        grid-row : 3/4;
+                }
+                .wb7 {
+                        grid-column: 3/4;
+                        grid-row : 3/4;
+                } 
         }
         
 </style>

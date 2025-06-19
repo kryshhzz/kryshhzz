@@ -20,7 +20,7 @@
 
         header {
                 width : 100%;
-                background : linear-gradient(to bottom, rgba(0,0,0,.75), transparent);
+                background : linear-gradient(to bottom, rgba(0,0,0,1) 30%, transparent);
                 padding : 2em 1em;
 
                 position: fixed;

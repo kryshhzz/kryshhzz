@@ -25,7 +25,7 @@
                 <div class="about-cont stiff">
                         <h2>whoami</h2>
                         <b class='whoami-txt' ref='whoamiTxt' @mousemove="ChangePos" :style="{ backgroundPosition :  posx+'px center'}">
-                                <span class="italic">Hello!</span> I’m Krishna Prasad, pursuing my MCA at NIT Warangal, where I focus on full-stack development to build exceptional web applications. Known for my quick learning abilities and passion for coding, I have also worked as a freelancer on Fiverr, creating eye-catching landing pages.
+                                <span >Hello!</span> I’m Krishna Prasad, pursuing my MCA at NIT Warangal, where I focus on full-stack development to build exceptional web applications. Known for my quick learning abilities and passion for coding, I have also worked as a freelancer on Fiverr, creating eye-catching landing pages.
                         </b>
                         <br>
                         <h2>codebase</h2>
@@ -40,6 +40,7 @@
                                 <span>JavaScript</span>
                                 <Span>Linux</Span>
                                 <span>SEO</span>
+                                <span>Git</span>
                         </div>
                         
                 </div>
@@ -100,16 +101,29 @@
                 
         }
         .whoami-txt {
-               color : rgb(255 255 255 / .2) !important; 
                font-weight: 400;
-               line-height : 1.75em; 
+               line-height : 1.75em;  
+               font-size : 1.5em; 
 
                background-clip: text; 
-               background-repeat : no-repeat;
-                background-image: radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 60%, rgba(255, 255, 255, 0.4) 80%, transparent 100%);
+                background-repeat : no-repeat;
+                background-image: radial-gradient(circle closest-side at 50% 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 60%, rgba(255, 255, 255, 0.1) 500%, transparent 100%);
                 backdrop-filter: blur(10px); 
                 background-position : 50% center;
                 transition-timing-function : cubic-bezier(0.33, 0.81, 0.66, 0.95);
+                color : rgb(255 255 255 / .2) !important; 
+        }  
+        @media(max-width : 730px) {
+                .whoami-txt { 
+                        font-weight: 400;
+                        line-height : 1.75em;  
+                        font-size : 1.5em; 
+                        color : rgb(255 255 255 / .4) !important; 
+                        background-image : none;
+                }
+        }
+        .whoami-txt span {
+                color : $green;
         }
         .about-cont p {
                 color : $gray;
@@ -157,7 +171,8 @@
                 top : 2em;
                 height : 100%;
                 left : 0;
-                border-left : .15em solid rgb(176 255 146 / 10%);
+                border-left : .15em solid rgb(176 255 146 / 15%);
+                
         }
         .edu-box::after {
                 content : '';
@@ -171,6 +186,7 @@
                 border-radius: 50%;
                 background : $black;
                 box-shadow : 0 0 .5em $green;
+                border : .1em solid $green;
         }
         .edu-box a {
                 color : $green;
