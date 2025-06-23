@@ -1,5 +1,5 @@
 # kryshhzz
 
 ```sh
-npm run life
+go run life.go
 ```
